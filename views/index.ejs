@@ -12,7 +12,30 @@
 <body>
     <%- include("templates/navbar") %>
         <div class="container h-600">
-            <h1>hi</h1>
+            <h1 class="center pt-5">Articles</h1>
+            <div class="articles mt-10">
+                <% articles.forEach(article => { %>
+                    <div class="article m-10 pb-5 pt-5">
+                        <h2>
+                            <%= article.title %>
+                        </h2>
+                        <h3>
+                            <%= article.date.toLocaleDateString() %>
+                        </h3>
+                        <p>
+                            <%= article.description %>
+                        </p>
+                        <div class="buttons">
+                            <div class="btn">
+                                <a href="#">Edit</a>
+                            </div>
+                            <div class="btn">
+                                <a href="#">Edit</a>
+                            </div>
+                        </div>
+                    </div>
+                    <% }) %>
+            </div>
         </div>
         <%- include("templates/footer") %>
 </body>
