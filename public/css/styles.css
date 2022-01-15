@@ -35,11 +35,6 @@
     margin: 5px;
 }
 
-.buttons {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
 
 /* Navbar */
 
@@ -92,6 +87,30 @@
     background: black;
     border-radius: 10px;
     color: white;
+}
+
+.article .buttons ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.article .buttons ul li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 500px) {
+    .article .buttons ul {
+        display: flex;
+        flex-direction: column;
+    }
+    .article .buttons ul li {
+        margin-top: 15px;
+    }
+    .article .buttons ul li:last-child {
+        margin-bottom: 7px;
+    }
 }
 
 
