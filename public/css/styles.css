@@ -34,6 +34,28 @@
     padding: 5px;
 }
 
+.btn-red {
+    background: red;
+}
+
+.btn-blue {
+    color: white;
+    background: blue;
+}
+
+.btn-green {
+    background: green;
+}
+
+.btn-black {
+    color: white;
+    background: black;
+}
+
+.btn-orange {
+    background: orange;
+}
+
 
 /* Navbar */
 
