@@ -103,6 +103,7 @@
     top: 3px;
     right: 5px;
     color: white;
+    cursor: pointer;
 }
 
 
@@ -113,6 +114,8 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .footer ul li {
@@ -191,6 +194,10 @@
     .nav .navbar {
         position: absolute;
         transform: translateY(-200px);
+    }
+    /* Change footer layout */
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
