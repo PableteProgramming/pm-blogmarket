@@ -61,10 +61,11 @@
 
 .navbar {
     background: black;
+    position: sticky;
+    width: 100%;
 }
 
 .navbar ul {
-    margin-top: 10px;
     margin-left: 10px;
     display: flex;
     list-style: none;
@@ -91,8 +92,8 @@
 
 /* Heights */
 
-.h-600 {
-    height: 600px;
+.h-6000 {
+    height: 6000px;
 }
 
 
