@@ -59,19 +59,23 @@
 
 /* Navbar */
 
-.navbar {
-    background: black;
+.nav {
     position: sticky;
+    top: 0;
     width: 100%;
 }
 
-.navbar ul {
+.nav .navbar {
+    background: black;
+}
+
+.nav .navbar ul {
     margin-left: 10px;
     display: flex;
     list-style: none;
 }
 
-.navbar ul li {
+.nav .navbar ul li {
     padding: 10px;
 }
 
