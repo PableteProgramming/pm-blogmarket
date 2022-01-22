@@ -67,6 +67,7 @@
 
 .nav .navbar {
     background: black;
+    position: static;
 }
 
 .nav .navbar ul {
@@ -77,6 +78,31 @@
 
 .nav .navbar ul li {
     padding: 10px;
+}
+
+.nav .small-navbar {
+    position: absolute;
+    transform: translateY(-200px);
+    background: black;
+}
+
+.nav .small-navbar {
+    height: 38px;
+}
+
+.nav .small-navbar .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+}
+
+.nav .small-navbar .icon {
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    color: white;
 }
 
 
@@ -128,6 +154,7 @@
 }
 
 @media (max-width: 515px) {
+    /* Change articles' buttons layout */
     .article .buttons ul {
         display: grid;
         grid-template-columns: 1fr;
@@ -148,9 +175,22 @@
 }
 
 @media (max-width: 315px) {
+    /* Show articles one by one*/
     .articles {
         display: flex;
         flex-direction: column;
+    }
+}
+
+@media(max-width: 370px) {
+    /*Change nav layout */
+    .nav .small-navbar {
+        position: static;
+        transform: translateY(0);
+    }
+    .nav .navbar {
+        position: absolute;
+        transform: translateY(-200px);
     }
 }
 
