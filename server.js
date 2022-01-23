@@ -3,9 +3,13 @@ const mongoose = require('mongoose')
 const productsRouter = require('./routes/products')
 const articlesRouter = require('./routes/articles')
 const globalvars = require('./globals')
+const bodyparser = require('body-parser')
+const Article = require('./models/articles')
 
 const articlesPath = globalvars.articlesPath
 const productsPath = globalvars.productsPath
+
+mongoose.connect('mongodb://localhost/blogmarket')
 
 const app = express()
 
@@ -13,32 +17,14 @@ const app = express()
 
 app.set('view engine', 'ejs')
 app.use(express.static("public"))
+app.use(bodyparser.urlencoded({ extended: false }))
+app.use(bodyparser.json())
 app.use(productsPath, productsRouter)
 app.use(articlesPath, articlesRouter)
 
 
-app.get("/", (req, res) => {
-    let articles = [{
-            title: "Article 1",
-            description: "Article 1 desc",
-            date: new Date
-        },
-        {
-            title: "Article 2",
-            description: "Article 2 desc",
-            date: new Date
-        },
-        {
-            title: "Article 3",
-            description: "Article 3 desc",
-            date: new Date
-        },
-        {
-            title: "Article 4",
-            description: "Article 4 desc",
-            date: new Date
-        }
-    ]
+app.get("/", async(req, res) => {
+    let articles = await Article.find()
 
     res.render('index', {
         productsRoot: productsPath,
