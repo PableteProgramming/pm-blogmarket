@@ -9,7 +9,7 @@ const Article = require('./models/articles')
 const articlesPath = globalvars.articlesPath
 const productsPath = globalvars.productsPath
 
-mongoose.connect('mongodb://localhost/blogmarket')
+mongoose.connect(process.env.MONGODB_URI)
 
 const app = express()
 
