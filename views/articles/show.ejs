@@ -17,13 +17,15 @@
 
     <!-- Custom css -->
     <link rel="stylesheet" href="../../css/styles.css">
-    <title>Articles</title>
+    <title>Article</title>
 </head>
 
 <body>
-    <%- include("../templates/navbar") %>
-        <h1>You are in articles</h1>
-        <%- include("../templates/footer") %>
+    <h1>Article created with id:
+        <%= article.id %>
+    </h1>
+    <br>
+    <a href="/" class="btn btn-green">All articles</a>
 </body>
 
 </html>

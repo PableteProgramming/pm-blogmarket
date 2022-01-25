@@ -19,18 +19,22 @@ router.get("/new", (req, res) => {
     res.render("articles/new")
 })
 
+router.get("/show/:id", async(req, res) => {
+    res.render("articles/show", { article: await Article.findById(req.params.id) })
+})
+
 router.post("/", async(req, res, next) => {
-    /* request fr creating a new article */
+    /* request for creating a new article */
     let newArticle = new Article({
         title: req.body.title,
         description: req.body.description
     })
     try {
-        article = await article.save()
+        newArticle = await newArticle.save()
+        res.render("articles/show", { article: newArticle })
     } catch (e) {
         res.redirect("/")
     }
-    res.send(`new article with title: ${req.body.title}`)
 })
 
 module.exports = router
