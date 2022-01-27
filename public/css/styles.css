@@ -32,28 +32,38 @@
     background: white;
     border-radius: 5px;
     padding: 5px;
+    border-width: 0;
 }
 
 .btn-red {
     background: red;
+    border-color: red;
 }
 
 .btn-blue {
     color: white;
     background: blue;
+    border-color: blue;
 }
 
 .btn-green {
     background: green;
+    border-color: green;
 }
 
 .btn-black {
     color: white;
     background: black;
+    border-color: black;
 }
 
 .btn-orange {
     background: orange;
+    border-color: orange;
+}
+
+.btn-form {
+    cursor: pointer;
 }
 
 
@@ -146,12 +156,25 @@
     display: flex;
     flex-direction: row;
     list-style: none;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .article .buttons ul li {
-    margin-top: 10px;
-    margin-bottom: 10px;
     margin-left: 10px;
+}
+
+.article .buttons ul li form {
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.article .buttons ul li form .btn-form {
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
 
 @media (max-width: 515px) {
@@ -159,13 +182,19 @@
     .article .buttons ul {
         display: grid;
         grid-template-columns: 1fr;
+        margin-top: 0;
+        margin-bottom: 0;
     }
     .article .buttons ul li {
-        margin-top: 10px;
-        margin-bottom: 0;
         margin-left: 0;
+        margin-top: 10px;
     }
     .article .buttons ul li a {
+        display: block;
+        width: 90%;
+        margin: auto;
+    }
+    .btn-form {
         display: block;
         width: 90%;
         margin: auto;

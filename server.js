@@ -5,6 +5,8 @@ const articlesRouter = require('./routes/articles')
 const globalvars = require('./globals')
 const bodyparser = require('body-parser')
 const Article = require('./models/articles')
+require('dotenv').config()
+const methodOverride = require('method-override')
 
 const articlesPath = globalvars.articlesPath
 const productsPath = globalvars.productsPath
@@ -18,6 +20,7 @@ const app = express()
 app.set('view engine', 'ejs')
 app.use(express.static("public"))
 app.use(bodyparser.urlencoded({ extended: false }))
+app.use(methodOverride('_method'))
 app.use(bodyparser.json())
 app.use(productsPath, productsRouter)
 app.use(articlesPath, articlesRouter)

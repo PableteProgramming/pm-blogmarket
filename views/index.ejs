@@ -6,9 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <%- include("templates/links") %>
+    <!--Font awesome-->
+    <link rel="stylesheet" href="font-awesome/css/all.css" />
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.css" />
 
-        <title>Blogmarket</title>
+    <!-- Jquery -->
+    <script src="jquery/jquery.js"></script>
+
+    <!-- Custom jquery -->
+    <script src="js/main.js"></script>
+
+    <!-- Custom css -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Blogmarket</title>
 </head>
 
 <body>
@@ -31,7 +42,11 @@
                             <ul>
                                 <li><a href="articles/show/<%= article.id %>" class="btn">Show more</a></li>
                                 <li><a href="#" class="btn btn-blue">Edit</a></li>
-                                <li><a href="#" class="btn btn-orange">Delete</a></li>
+                                <li>
+                                    <form action="/articles/<%= article.id %>?_method=DELETE" method="POST">
+                                        <button type="submit" class="btn btn-orange btn-form">Delete</button>
+                                    </form>
+                                </li>
                             </ul>
                         </div>
                     </div>
