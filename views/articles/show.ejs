@@ -21,9 +21,17 @@
 </head>
 
 <body>
-    <h1>Article created with id:
-        <%= article.id %>
-    </h1>
+    <div class="show-article-container container mt-10">
+        <h1>
+            <%= article.title %>
+        </h1>
+        <p class="mt-5">Created the:
+            <%= article.date.toLocaleDateString() %>
+        </p>
+        <div class="description mt-10">
+            <%= article.description %>
+        </div>
+    </div>
     <br>
     <a href="/" class="btn btn-green">All articles</a>
 </body>

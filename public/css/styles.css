@@ -9,7 +9,6 @@
 .container {
     width: 90%;
     margin: auto;
-    background: red;
 }
 
 .beauty-link {
@@ -175,6 +174,18 @@
 .article .buttons ul li form .btn-form {
     padding-top: 6px;
     padding-bottom: 6px;
+}
+
+
+/* show */
+
+.show-article-container .description {
+    font-size: 20px;
+}
+
+.show-article-container h1 {
+    font-weight: bold;
+    font-size: 50px;
 }
 
 @media (max-width: 515px) {
